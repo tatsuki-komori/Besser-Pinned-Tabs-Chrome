@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Besser Pinned Tabs",
-  "version": "1.0",
+  "version": "1.0.3",
   "description": "Protects pinned tabs by quickly reopening them if closed",
   "permissions": [
     "tabs",
