@@ -1,3 +1,14 @@
+# 1.0.6
+## Security & Privacy Improvements
+- Removed host permissions requirement (`<all_urls>`)
+- Eliminated content scripts in favor of using the webNavigation API
+- Simplified codebase by removing message passing between content and background scripts
+
+Note: This update may result in a brief visual flash when clicking links in pinned tabs, but provides enhanced privacy by reducing required permissions.
+
+# 1.0.5
+Updated description in the manifest
+
 # 1.0.4
 Removed unused storage permission
 
