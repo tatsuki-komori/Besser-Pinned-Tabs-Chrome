@@ -1,3 +1,7 @@
+# 1.0.8
+## Bug Fixes
+- Fixed issue with infinite redirect loops in pinned tabs. Previously, if a pinned tab kept redirecting to another domain (such as login redirects), it would continually open new tabs. This has been resolved by allowing the second redirect attempt to the same domain.
+
 # 1.0.6
 ## Security & Privacy Improvements
 - Removed host permissions requirement (`<all_urls>`)
