@@ -65,14 +65,9 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 // Listen for tab removal
 chrome.tabs.onRemoved.addListener((tabId, removeInfo) => {
+  // The tab recreation logic has been removed to disable the feature.
   if (pinnedTabs[tabId]) {
-    chrome.tabs.create(
-      { url: pinnedTabs[tabId].url, pinned: true, index: pinnedTabs[tabId].index },
-      (newTab) => {
-        pinnedTabs[newTab.id] = { url: newTab.url, index: newTab.index };
-        delete pinnedTabs[tabId];
-      }
-    );
+    delete pinnedTabs[tabId];
   }
   
   // Clean up tracking data
